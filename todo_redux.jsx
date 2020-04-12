@@ -1,14 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Root from './components/root';
 
-function Content(){
-    return(
-        <div>
-            <h1>Todos App</h1>
-        </div>
-    );
-}
 
 document.addEventListener("DOMContentLoaded", ()=> {
-    ReactDOM.render(<Content/>, document.getElementById("root"));
+    
+    const root = document.getElementById("root");
+    ReactDOM.render(<Root store={store} />, root);
 });
