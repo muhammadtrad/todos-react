@@ -6,7 +6,7 @@ class TodoListItem extends React.Component{
         this.state = {detail: false};
 
         this.toggleTodo = this.toggleTodo.bind(this);
-
+        this.toggleDetail = this.toggleDetail.bind(this);
     }
 
     toggleDetail(e){

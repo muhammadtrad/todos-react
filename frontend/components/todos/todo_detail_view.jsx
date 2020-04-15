@@ -14,3 +14,5 @@ class TodoDetailView extends React.Component{
         )
     }
 }
+
+export default TodoDetailView;
