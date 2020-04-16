@@ -17,6 +17,7 @@ export const stepsByTodoId = ( { steps }, todo_id) => {
         if (steps[stepId].todo_id === todo_id){
             stepsByTodoId.push(step);
         }
-        return stepsByTodoId;
+        
     })
+    return stepsByTodoId;
 };
