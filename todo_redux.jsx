@@ -5,14 +5,15 @@ import configureStore from './frontend/store/store';
 import { receiveTodo, receiveTodos} from './frontend/actions/todo_actions'
 import { allTodos, stepsByTodoId } from './frontend/reducers/selectors';
 
+
 document.addEventListener("DOMContentLoaded", ()=> {
-    const store = configureStore();
+
+    const preloadedState = localStorage.state ?
+    JSON.parse(localStorage.state) : {};
+
+    const store = configureStore(preloadedState);
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root);
-    window.store = store;
-    window.receiveTodo  = receiveTodo;
-    window.receiveTodos = receiveTodos;
-    window.allTodos = allTodos;
-    window.stepsByTodoId = stepsByTodoId;
+ 
 });
 

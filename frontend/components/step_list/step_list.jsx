@@ -1,5 +1,4 @@
 import React from 'react';
- 
 
 const StepList = ({ steps, todo_id, receiveStep }) => {
     const stepItems = steps.map(step => (
